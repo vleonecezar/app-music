@@ -1,5 +1,12 @@
+import { GlobalStyle } from "./Styles/GlobalStyles";
+
 function App() {
-  return <>Todo: App</>;
+  return (
+    <>
+      <GlobalStyle />
+      Todo: App
+    </>
+  );
 }
 
 export default App;
