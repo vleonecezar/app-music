@@ -6,14 +6,14 @@ import SearchBar from "./Components/SearchBar";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
-  const [favoritesList, setFavoritesList] = useState(false);
+  const [favoritesScreen, setFavoritesScreen] = useState(false);
 
   return (
     <>
       <GlobalStyle />
       <Layout>
-        {favoritesList ? <FavoritesTittle /> : <SearchBar />}
-        <NavBar />
+        {favoritesScreen ? <FavoritesTittle /> : <SearchBar />}
+        <NavBar setFavoritesScreen={setFavoritesScreen} />
       </Layout>
     </>
   );

@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.h1`
+  position: relative;
+  z-index: 9999;
+  background: white;
   grid-area: search;
   display: flex;
   justify-content: center;

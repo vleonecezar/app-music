@@ -1,15 +1,33 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.nav`
+export const Wrapper = styled.div`
+  @media (max-width: 800px) {
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.1);
+  }
+`;
+
+export const Container = styled.nav`
   grid-area: nav;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-right: 1px solid grey;
+  background: white;
 
   > img {
     width: 150px;
     margin-top: 30px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
   }
 
   ul {
@@ -40,14 +58,18 @@ export const Wrapper = styled.nav`
   }
 
   @media (max-width: 800px) {
-    position: absolute;
-    top: 35px;
-    right: 0;
+    position: relative;
+    top: 50px;
     width: 200px;
     border: none;
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
     border-bottom-left-radius: 5px;
+    height: initial;
+
+    h2 {
+      margin-bottom: 40px;
+    }
 
     ul {
       width: 100%;
