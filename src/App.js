@@ -1,4 +1,5 @@
 import { Layout } from "./app.styles";
+import FavoritesTittle from "./Components/FavoritesTittle";
 import SearchBar from "./Components/SearchBar";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
@@ -7,7 +8,8 @@ function App() {
     <>
       <GlobalStyle />
       <Layout>
-        <SearchBar />
+        <FavoritesTittle />
+        {/* <SearchBar /> */}
       </Layout>
     </>
   );
