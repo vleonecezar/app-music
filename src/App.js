@@ -1,10 +1,11 @@
+import { Layout } from "./app.styles";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      Todo: App
+      <Layout>Todo: App</Layout>
     </>
   );
 }
