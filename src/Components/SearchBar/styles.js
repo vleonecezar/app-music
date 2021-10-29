@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  position: relative;
+  z-index: 9999;
   grid-area: search;
   display: flex;
   align-items: center;
-
+  background: white;
   border-bottom: 1px solid grey;
   padding-left: 8px;
 

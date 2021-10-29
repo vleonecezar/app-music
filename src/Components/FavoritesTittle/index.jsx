@@ -1,8 +1,8 @@
 import React from "react";
-import { Tittle } from "./styles";
+import { Wrapper } from "./styles";
 
 const FavoritesTittle = () => {
-  return <Tittle>Favoritas</Tittle>;
+  return <Wrapper>Favoritas</Wrapper>;
 };
 
 export default FavoritesTittle;

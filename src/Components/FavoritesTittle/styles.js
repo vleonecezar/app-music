@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Tittle = styled.h1`
+export const Wrapper = styled.h1`
   grid-area: search;
   display: flex;
   justify-content: center;

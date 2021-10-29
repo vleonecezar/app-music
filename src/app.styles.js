@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Layout = styled.div`
+  position: relative;
   display: grid;
   grid-template-areas:
     "nav search"
