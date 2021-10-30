@@ -1,13 +1,12 @@
 import React from "react";
 import { Wrapper } from "./styles";
 
-const Content = () => {
+const Content = ({ currentCards, pageQuantity, handlePage }) => {
   return (
     <Wrapper>
-      <ul>
-        <li>Todo: card</li>
-      </ul>
-      <ul>1</ul> {/* Todo: change for a new component */}
+      <ul></ul>
+      <ul></ul>
+      {/* Todo: change for a new component */}
     </Wrapper>
   );
 };
