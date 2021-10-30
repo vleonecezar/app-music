@@ -5,18 +5,7 @@ const Content = () => {
   return (
     <Wrapper>
       <ul>
-        <li>item</li>
-        <li>item</li>
-        <li>item</li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
-        <li>item </li>
+        <li>Todo: card</li>
       </ul>
       <ul>1</ul> {/* Todo: change for a new component */}
     </Wrapper>
