@@ -4,7 +4,6 @@ const usePagination = (items) => {
   const [currentPage, setCurrentPage] = useState(1);
   const cards = items;
   const itemsPerPage = 10;
-  console.log(items);
 
   const lastIndexOfPage = currentPage * itemsPerPage;
   const FirstIndexOfPage = lastIndexOfPage - itemsPerPage;
