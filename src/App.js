@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "./app.styles";
+import Content from "./Components/Content";
 import FavoritesTittle from "./Components/FavoritesTittle";
 import NavBar from "./Components/NavBar";
 import SearchBar from "./Components/SearchBar";
@@ -14,6 +15,7 @@ function App() {
       <Layout>
         {favoritesScreen ? <FavoritesTittle /> : <SearchBar />}
         <NavBar setFavoritesScreen={setFavoritesScreen} />
+        <Content />
       </Layout>
     </>
   );

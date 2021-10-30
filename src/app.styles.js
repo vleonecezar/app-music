@@ -10,6 +10,7 @@ export const Layout = styled.div`
   grid-template-rows: 50px 1fr;
   width: 100vw;
   height: 100vh;
+  overflow-y: hidden;
 
   @media (max-width: 800px) {
     grid-template-areas:
