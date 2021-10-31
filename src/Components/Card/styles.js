@@ -51,7 +51,7 @@ export const Buttons = styled.div`
     transition: 0.1s;
 
     img {
-      width: 23px;
+      width: 25px;
     }
 
     &:active {

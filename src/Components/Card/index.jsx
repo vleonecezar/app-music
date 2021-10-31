@@ -1,7 +1,7 @@
 import React from "react";
 import convertedTime from "../../Helpers/formatMinutes";
 import { Wrapper, Info, Buttons } from "./styles";
-import favoriteImg from "../../Assets/heart-icon.png";
+import favoriteImg from "../../Assets/favorite-icon.png";
 import deezerImg from "../../Assets/deezer-icon.png";
 import playImg from "../../Assets/play-icon.png";
 import stopImg from "../../Assets/stop-icon.png";
