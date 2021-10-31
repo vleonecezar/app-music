@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import Card from "../Card";
-import { Wrapper } from "./styles";
+import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
+import arrowImg from "../../Assets/arrow-icon.png";
 
 const Content = ({ currentCards, pageQuantity, handlePage }) => {
   return (
     <Wrapper>
-      <ul>
-        {currentCards.map((card) => (
-          <li key={card.id}>
-            <Card card={card} />
-          </li>
-        ))}
-      </ul>
-      <ul></ul>
-      {/* Todo: change for a new component */}
+      {
+        <CardsList>
+          <ul>
+            {currentCards.map((card) => (
+              <li key={card.id}>
+                <Card card={card} />
+              </li>
+            ))}
+          </ul>
+        </CardsList>
+      }
+      <Arrow>
+        <img src={arrowImg} alt="arrow icon" />
+      </Arrow>
+      <Pagination>
+        <ul>
+          {pageQuantity.map((number) => (
+            <li key={number} className="pag" onClick={() => handlePage(number)}>
+              {number}
+            </li>
+          ))}
+        </ul>
+      </Pagination>
     </Wrapper>
   );
 };
