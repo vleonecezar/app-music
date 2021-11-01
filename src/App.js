@@ -21,7 +21,9 @@ function App() {
   } = usePagination(data, favoritesScreen);
 
   useEffect(() => {
-    if (currentCards.length + 1 < itemsPerPage) setCurrentPage(1);
+    console.log(currentCards.length);
+    console.log(itemsPerPage);
+    if (currentCards.length === 0) setCurrentPage(1);
   }, [currentCards, itemsPerPage, setCurrentPage]);
 
   return (
