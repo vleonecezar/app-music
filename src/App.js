@@ -6,12 +6,11 @@ import NavBar from "./Components/NavBar";
 import SearchBar from "./Components/SearchBar";
 import useAxios from "./Hooks/useAxios";
 import usePagination from "./Hooks/usePagination";
-import { API_TOP_WORLD } from "./Services/api";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
   const [favoritesScreen, setFavoritesScreen] = useState(false);
-  const { loading, data, error } = useAxios(API_TOP_WORLD);
+  const { setAxiosOptions, loading, data, error } = useAxios();
   const { currentCards, currentPage, pageQuantity, handlePage } =
     usePagination(data);
 
@@ -19,7 +18,11 @@ function App() {
     <>
       <GlobalStyle />
       <Layout>
-        {favoritesScreen ? <FavoritesTittle /> : <SearchBar />}
+        {favoritesScreen ? (
+          <FavoritesTittle />
+        ) : (
+          <SearchBar setAxiosOptions={setAxiosOptions} />
+        )}
         <NavBar setFavoritesScreen={setFavoritesScreen} />
         <Content
           currentCards={currentCards}

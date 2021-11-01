@@ -9,3 +9,12 @@ export const API_TOP_WORLD = {
   params: { limit: 100 },
   headers: headers,
 };
+
+export const API_SEARCH = (name) => {
+  return {
+    method: "GET",
+    url: "https://deezerdevs-deezer.p.rapidapi.com/search",
+    params: { q: name, limit: 100 },
+    headers: headers,
+  };
+};
