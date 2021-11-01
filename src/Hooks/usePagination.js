@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const usePagination = (items) => {
+const usePagination = (items, favorites, favoritesScreen) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const cards = items;
-  const itemsPerPage = 12;
+  const cards = favoritesScreen ? favorites : items;
+  const itemsPerPage = 2;
 
   const lastIndexOfPage = currentPage * itemsPerPage;
   const FirstIndexOfPage = lastIndexOfPage - itemsPerPage;

@@ -5,8 +5,21 @@ import favoriteImg from "../../Assets/favorite-icon.png";
 import deezerImg from "../../Assets/deezer-icon.png";
 import playImg from "../../Assets/play-icon.png";
 import stopImg from "../../Assets/stop-icon.png";
+import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
+  const favorites = useSelector((state) => state.favoriteReducer);
+  const dispatch = useDispatch();
+
+  function handleFavorites(card) {
+    const isFavorites = favorites.find((favorite) => favorite.id === card.id);
+    if (isFavorites) {
+      dispatch({ type: "REMOVE_FAVORITE", payload: card });
+    } else {
+      dispatch({ type: "ADD_FAVORITE", payload: card });
+    }
+  }
+  console.log(favorites);
   return (
     <Wrapper>
       <img src={card.album.cover_medium} alt="capa do album" />
@@ -26,7 +39,7 @@ const Card = ({ card }) => {
         <button>
           <img src={playImg} alt="icone de play" />
         </button>
-        <button>
+        <button onClick={() => handleFavorites(card)}>
           <img src={favoriteImg} alt="icone de coração" />
         </button>
       </Buttons>
