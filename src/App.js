@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import { Layout } from "./app.styles";
 import Content from "./Components/Content";
 import FavoritesTittle from "./Components/FavoritesTittle";
@@ -10,14 +9,20 @@ import usePagination from "./Hooks/usePagination";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
-  const favorites = useSelector((state) => state.favoriteReducer);
   const [favoritesScreen, setFavoritesScreen] = useState(false);
   const { setAxiosOptions, loading, data, error } = useAxios();
-  const { currentCards, currentPage, pageQuantity, handlePage } = usePagination(
-    data,
-    favorites,
-    favoritesScreen
-  );
+  const {
+    currentCards,
+    currentPage,
+    setCurrentPage,
+    pageQuantity,
+    handlePage,
+    itemsPerPage,
+  } = usePagination(data, favoritesScreen);
+
+  useEffect(() => {
+    if (currentCards.length + 1 < itemsPerPage) setCurrentPage(1);
+  }, [currentCards, itemsPerPage, setCurrentPage]);
 
   return (
     <>
@@ -28,7 +33,10 @@ function App() {
         ) : (
           <SearchBar setAxiosOptions={setAxiosOptions} />
         )}
-        <NavBar setFavoritesScreen={setFavoritesScreen} />
+        <NavBar
+          setFavoritesScreen={setFavoritesScreen}
+          setCurrentPage={setCurrentPage}
+        />
         <Content
           currentCards={currentCards}
           currentPage={currentPage}

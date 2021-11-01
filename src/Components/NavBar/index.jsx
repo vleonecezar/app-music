@@ -4,7 +4,12 @@ import logoImg from "../../Assets/logo.png";
 import musicImg from "../../Assets/music-icon.png";
 import favoritesImg from "../../Assets/heart-icon.png";
 
-const NavBar = ({ setFavoritesScreen }) => {
+const NavBar = ({ setFavoritesScreen, setCurrentPage }) => {
+  function handleNavigation(value) {
+    setFavoritesScreen(value);
+    setCurrentPage(1);
+  }
+
   return (
     <Wrapper>
       <Container>
@@ -12,13 +17,13 @@ const NavBar = ({ setFavoritesScreen }) => {
         <h2>App Music</h2>
         <ul>
           <li>
-            <a href="#" onClick={() => setFavoritesScreen(false)}>
+            <a href="#" onClick={() => handleNavigation(false)}>
               <img src={musicImg} alt="icone de música" />
               Músicas
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => setFavoritesScreen(true)}>
+            <a href="#" onClick={() => handleNavigation(true)}>
               <img src={favoritesImg} alt="icone de coração" />
               Favoritas
             </a>

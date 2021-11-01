@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const usePagination = (items, favorites, favoritesScreen) => {
+const usePagination = (items, favoritesScreen) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const favorites = useSelector((state) => state.favoriteReducer);
 
   const cards = favoritesScreen ? favorites : items;
-  const itemsPerPage = 2;
+  const itemsPerPage = 5;
 
   const lastIndexOfPage = currentPage * itemsPerPage;
   const FirstIndexOfPage = lastIndexOfPage - itemsPerPage;
@@ -21,7 +23,9 @@ const usePagination = (items, favorites, favoritesScreen) => {
   return {
     currentCards,
     currentPage,
+    setCurrentPage,
     pageQuantity,
+    itemsPerPage,
     handlePage,
   };
 };
