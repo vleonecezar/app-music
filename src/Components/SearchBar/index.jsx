@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Wrapper } from "./styles";
 import searchIconImg from "../../Assets/search-icon.png";
 import { API_SEARCH } from "../../Services/api";
 
-const SearchBar = ({ setAxiosOptions }) => {
+const SearchBar = ({ setAxiosOptions, setCurrentPage }) => {
   const [inputValue, setInputValue] = useState("");
+  const input = useRef();
 
   function handleSearch(e) {
     e.preventDefault();
     setAxiosOptions(API_SEARCH(inputValue));
+    setCurrentPage(1);
+    setInputValue("");
+    input.current.blur();
   }
 
   return (
@@ -20,7 +24,8 @@ const SearchBar = ({ setAxiosOptions }) => {
         type="text"
         placeholder="Buscar"
         value={inputValue}
-        onChange={({ target }) => setInputValue(target.value)}
+        ref={input}
+        onChange={() => setInputValue(input.current.value)}
       />
     </Wrapper>
   );

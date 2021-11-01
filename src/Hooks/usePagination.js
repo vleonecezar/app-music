@@ -6,7 +6,7 @@ const usePagination = (items, favoritesScreen) => {
   const favorites = useSelector((state) => state.favoriteReducer);
 
   const cards = favoritesScreen ? favorites : items;
-  const itemsPerPage = 5;
+  const itemsPerPage = 12;
 
   const lastIndexOfPage = currentPage * itemsPerPage;
   const FirstIndexOfPage = lastIndexOfPage - itemsPerPage;

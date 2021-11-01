@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid black;
   border-radius: 10px;
   padding: 15px 30px;
   margin: 20px 13px;
   transition: 0.2s;
+  width: 280px;
+  height: 450px;
 
   > img {
     width: 220px;

@@ -31,7 +31,10 @@ function App() {
         {favoritesScreen ? (
           <FavoritesTittle />
         ) : (
-          <SearchBar setAxiosOptions={setAxiosOptions} />
+          <SearchBar
+            setAxiosOptions={setAxiosOptions}
+            setCurrentPage={setCurrentPage}
+          />
         )}
         <NavBar
           setFavoritesScreen={setFavoritesScreen}
