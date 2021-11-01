@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React from "react";
 import Card from "../Card";
 import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
 
-const Content = ({ currentCards, pageQuantity, handlePage }) => {
+const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
   return (
     <Wrapper>
       {
@@ -23,8 +23,13 @@ const Content = ({ currentCards, pageQuantity, handlePage }) => {
       <Pagination>
         <ul>
           {pageQuantity.map((number) => (
-            <li key={number} className="pag" onClick={() => handlePage(number)}>
-              {number}
+            <li key={number}>
+              <button
+                onClick={() => handlePage(number)}
+                disabled={number === currentPage}
+              >
+                {number}
+              </button>
             </li>
           ))}
         </ul>

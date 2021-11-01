@@ -49,15 +49,23 @@ export const Pagination = styled.div`
   ul {
     display: inline-flex;
     li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      height: 30px;
-      border: 1px solid black;
-      border-radius: 50%;
-      margin: 0 10px;
-      cursor: pointer;
+      button {
+        display: flex;
+        font-size: 1.02em;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+
+        &:disabled {
+          color: white;
+          background: grey;
+        }
+      }
     }
 
     .active {

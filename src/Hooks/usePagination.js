@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const usePagination = (items) => {
   const [currentPage, setCurrentPage] = useState(1);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const cardLoaded = document.querySelector(".pag");
-      if (cardLoaded) {
-        setClass(1);
-        clearInterval(interval);
-      }
-    }, 300);
-  }, []);
 
   const cards = items;
   const itemsPerPage = 12;
@@ -26,19 +16,11 @@ const usePagination = (items) => {
 
   function handlePage(number) {
     setCurrentPage(number);
-    setClass(number);
-  }
-
-  function setClass(number) {
-    const pages = [...document.querySelectorAll(".pag")];
-    pages.map((page) => {
-      page.classList.remove("active");
-      return Number(page.innerText) === number && page.classList.add("active");
-    });
   }
 
   return {
     currentCards,
+    currentPage,
     pageQuantity,
     handlePage,
   };

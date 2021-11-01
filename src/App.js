@@ -12,7 +12,8 @@ import { GlobalStyle } from "./Styles/GlobalStyles";
 function App() {
   const [favoritesScreen, setFavoritesScreen] = useState(false);
   const { loading, data, error } = useAxios(API_TOP_WORLD);
-  const { currentCards, pageQuantity, handlePage } = usePagination(data);
+  const { currentCards, currentPage, pageQuantity, handlePage } =
+    usePagination(data);
 
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
         <NavBar setFavoritesScreen={setFavoritesScreen} />
         <Content
           currentCards={currentCards}
+          currentPage={currentPage}
           pageQuantity={pageQuantity}
           handlePage={handlePage}
         />
