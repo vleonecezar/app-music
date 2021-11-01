@@ -1,16 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Card from "../Card";
 import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
 
-const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
-  const view = useRef();
-  useEffect(() => {
-    view.current.scrollTo(0, 0);
-  }, [currentCards]);
-
+const Content = ({
+  currentCards,
+  currentPage,
+  setCurrentPage,
+  pageQuantity,
+  handlePage,
+}) => {
   return (
-    <Wrapper ref={view}>
+    <Wrapper>
       {
         <CardsList>
           <ul>
