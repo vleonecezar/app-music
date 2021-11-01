@@ -13,6 +13,7 @@ function App() {
   const { setAxiosOptions, loading, data, error } = useAxios();
   const {
     currentCards,
+    favorites,
     currentPage,
     setCurrentPage,
     pageQuantity,
@@ -21,8 +22,8 @@ function App() {
   } = usePagination(data, favoritesScreen);
 
   useEffect(() => {
-    if (currentCards.length + 1 < itemsPerPage) setCurrentPage(1);
-  }, [currentCards, itemsPerPage, setCurrentPage]);
+    if (favorites.length <= itemsPerPage) setCurrentPage(1);
+  }, [favorites, itemsPerPage, setCurrentPage]);
 
   return (
     <>

@@ -22,6 +22,7 @@ const usePagination = (items, favoritesScreen) => {
 
   return {
     currentCards,
+    favorites,
     currentPage,
     setCurrentPage,
     pageQuantity,
