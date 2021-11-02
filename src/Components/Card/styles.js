@@ -45,6 +45,7 @@ export const Buttons = styled.div`
   width: 100%;
   margin-top: 25px;
 
+  a,
   button {
     outline: none;
     cursor: pointer;

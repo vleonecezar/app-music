@@ -9,6 +9,7 @@ import stopImg from "../../Assets/stop-icon.png";
 import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
+  console.log(card);
   const favorites = useSelector((state) => state.favoriteReducer);
   const isFavorited = favorites.find((favorite) => favorite.id === card.id);
   const dispatch = useDispatch();
@@ -30,13 +31,13 @@ const Card = ({ card }) => {
         <p>{convertedTime(card.duration)}</p>
       </Info>
       <Buttons>
-        <button>
+        <a href={card.link} target="_blank" rel="noreferrer">
           <img
             src={deezerImg}
             alt="icone do Deezer"
             style={{ width: "33px" }}
           />
-        </button>
+        </a>
         <button>
           <img src={playImg} alt="icone de play" />
         </button>
