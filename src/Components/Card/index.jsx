@@ -2,6 +2,7 @@ import React from "react";
 import convertedTime from "../../Helpers/formatMinutes";
 import { Wrapper, Info, Buttons } from "./styles";
 import favoriteImg from "../../Assets/favorite-icon.png";
+import favoritedImg from "../../Assets/favorite-icon-red.png";
 import deezerImg from "../../Assets/deezer-icon.png";
 import playImg from "../../Assets/play-icon.png";
 import stopImg from "../../Assets/stop-icon.png";
@@ -9,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
   const favorites = useSelector((state) => state.favoriteReducer);
+  const isFavorited = favorites.includes(card);
   const dispatch = useDispatch();
 
   function handleFavorites(card) {
@@ -24,7 +26,7 @@ const Card = ({ card }) => {
     <Wrapper>
       <img src={card.album.cover_medium} alt="capa do album" />
       <Info>
-        <p>{card.title_short}</p>
+        <p title={card.title_short}>{card.title_short}</p>
         <p>{card.artist.name}</p>
         <p>{convertedTime(card.duration)}</p>
       </Info>
@@ -40,7 +42,10 @@ const Card = ({ card }) => {
           <img src={playImg} alt="icone de play" />
         </button>
         <button onClick={() => handleFavorites(card)}>
-          <img src={favoriteImg} alt="icone de coração" />
+          <img
+            src={isFavorited ? favoritedImg : favoriteImg}
+            alt="icone de coração"
+          />
         </button>
       </Buttons>
     </Wrapper>

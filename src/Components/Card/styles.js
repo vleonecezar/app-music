@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   height: 450px;
 
   > img {
-    width: 220px;
+    max-width: 220px;
     border-radius: 10px;
   }
 
@@ -24,7 +24,11 @@ export const Wrapper = styled.div`
 `;
 
 export const Info = styled.div`
+  width: 100%;
   p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-align: center;
     margin-top: 8px;
 
