@@ -18,6 +18,11 @@ const usePagination = (items, favoritesScreen) => {
 
   function handlePage(number) {
     setCurrentPage(number);
+    scrollTop();
+  }
+
+  function scrollTop() {
+    document.querySelector(".main").scrollTo(0, 0);
   }
 
   return {
@@ -27,6 +32,7 @@ const usePagination = (items, favoritesScreen) => {
     pageQuantity,
     itemsPerPage,
     handlePage,
+    scrollTop,
   };
 };
 

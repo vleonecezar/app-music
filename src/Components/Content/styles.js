@@ -4,6 +4,7 @@ export const Wrapper = styled.main`
   grid-area: content;
   overflow-x: hidden;
   overflow-y: auto;
+  scroll-behavior: smooth;
 `;
 
 export const CardsList = styled.div`

@@ -18,6 +18,7 @@ function App() {
     pageQuantity,
     handlePage,
     itemsPerPage,
+    scrollTop,
   } = usePagination(data, favoritesScreen);
 
   useEffect(() => {
@@ -36,15 +37,18 @@ function App() {
           <SearchBar
             setAxiosOptions={setAxiosOptions}
             setCurrentPage={setCurrentPage}
+            scrollTop={scrollTop}
           />
         )}
         <NavBar
           setFavoritesScreen={setFavoritesScreen}
           setCurrentPage={setCurrentPage}
+          scrollTop={scrollTop}
         />
         <Content
           currentCards={currentCards}
           currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
           pageQuantity={pageQuantity}
           handlePage={handlePage}
         />

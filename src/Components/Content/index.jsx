@@ -3,15 +3,9 @@ import Card from "../Card";
 import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
 
-const Content = ({
-  currentCards,
-  currentPage,
-  setCurrentPage,
-  pageQuantity,
-  handlePage,
-}) => {
+const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
   return (
-    <Wrapper>
+    <Wrapper className="main">
       {
         <CardsList>
           <ul>

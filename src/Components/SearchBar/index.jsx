@@ -3,7 +3,7 @@ import { Wrapper } from "./styles";
 import searchIconImg from "../../Assets/search-icon.png";
 import { API_SEARCH } from "../../Services/api";
 
-const SearchBar = ({ setAxiosOptions, setCurrentPage }) => {
+const SearchBar = ({ setAxiosOptions, setCurrentPage, scrollTop }) => {
   const [inputValue, setInputValue] = useState("");
   const input = useRef();
 
@@ -13,6 +13,7 @@ const SearchBar = ({ setAxiosOptions, setCurrentPage }) => {
     setCurrentPage(1);
     setInputValue("");
     input.current.blur();
+    scrollTop();
   }
 
   return (

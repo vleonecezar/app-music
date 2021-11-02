@@ -4,10 +4,11 @@ import logoImg from "../../Assets/logo.png";
 import musicImg from "../../Assets/music-icon.png";
 import favoritesImg from "../../Assets/heart-icon.png";
 
-const NavBar = ({ setFavoritesScreen, setCurrentPage }) => {
+const NavBar = ({ setFavoritesScreen, setCurrentPage, scrollTop }) => {
   function handleNavigation(value) {
     setFavoritesScreen(value);
     setCurrentPage(1);
+    scrollTop();
   }
 
   return (
