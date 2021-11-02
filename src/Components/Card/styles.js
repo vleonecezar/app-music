@@ -46,6 +46,7 @@ export const Buttons = styled.div`
   margin-top: 25px;
 
   button {
+    outline: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -53,9 +54,8 @@ export const Buttons = styled.div`
     width: 43px;
     height: 43px;
     border-radius: 50%;
-    outline: none;
     border: 1px solid black;
-    transition: 0.1s;
+    transition: 0.1s ease-out;
 
     img {
       width: 25px;

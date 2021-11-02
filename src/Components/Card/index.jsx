@@ -10,18 +10,17 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
   const favorites = useSelector((state) => state.favoriteReducer);
-  const isFavorited = favorites.includes(card);
+  const isFavorited = favorites.find((favorite) => favorite.id === card.id);
   const dispatch = useDispatch();
 
   function handleFavorites(card) {
-    const isFavorites = favorites.find((favorite) => favorite.id === card.id);
-    if (isFavorites) {
+    if (isFavorited) {
       dispatch({ type: "REMOVE_FAVORITE", payload: card });
     } else {
       dispatch({ type: "ADD_FAVORITE", payload: card });
     }
   }
-  console.log(favorites);
+
   return (
     <Wrapper>
       <img src={card.album.cover_medium} alt="capa do album" />
