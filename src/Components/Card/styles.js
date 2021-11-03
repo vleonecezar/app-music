@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import play from "../../Assets/play-icon.png";
+import playing from "../../Assets/playing.gif";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -59,12 +61,25 @@ export const Buttons = styled.div`
     transition: 0.1s ease-out;
 
     img {
-      width: 25px;
+      /* width: 25px; */
     }
 
     &:active {
       box-shadow: 0 -2px 3px black, -2px 0px 3px black;
       transform: scale(0.93);
+    }
+  }
+
+  .play {
+    background: url(${play}) no-repeat center;
+    background-size: 25px;
+  }
+
+  .playing {
+    background: url(${playing}) no-repeat center;
+    background-size: 25px;
+    &:hover {
+      background: black;
     }
   }
 `;

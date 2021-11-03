@@ -5,11 +5,13 @@ import favoriteImg from "../../Assets/favorite-icon.png";
 import favoritedImg from "../../Assets/favorite-icon-red.png";
 import deezerImg from "../../Assets/deezer-icon.png";
 import playImg from "../../Assets/play-icon.png";
+import playingImg from "../../Assets/playing.gif";
 import stopImg from "../../Assets/stop-icon.png";
 import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
   console.log(card);
+  const played = false;
   const favorites = useSelector((state) => state.favoriteReducer);
   const isFavorited = favorites.find((favorite) => favorite.id === card.id);
   const dispatch = useDispatch();
@@ -30,7 +32,7 @@ const Card = ({ card }) => {
         <p>{card.artist.name}</p>
         <p>{convertedTime(card.duration)}</p>
       </Info>
-      <Buttons>
+      <Buttons played={played}>
         <a href={card.link} target="_blank" rel="noreferrer">
           <img
             src={deezerImg}
@@ -38,8 +40,12 @@ const Card = ({ card }) => {
             style={{ width: "33px" }}
           />
         </a>
-        <button>
-          <img src={playImg} alt="icone de play" />
+        <button className={played ? "playing" : "play"}>
+          {/* <img
+            className={played ? "active" : ""}
+            src={played ? playingImg : playImg}
+            alt="icone de play"
+          /> */}
         </button>
         <button onClick={() => handleFavorites(card)}>
           <img
