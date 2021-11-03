@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import convertedTime from "../../Helpers/formatMinutes";
 import { Wrapper, Info, Buttons } from "./styles";
 import favoriteImg from "../../Assets/favorite-icon.png";
@@ -10,8 +10,8 @@ import stopImg from "../../Assets/stop-icon.png";
 import { useDispatch, useSelector } from "react-redux";
 
 const Card = ({ card }) => {
-  console.log(card);
-  const played = false;
+  const playingSong = useSelector((state) => state.playerReducer);
+  console.log(playingSong);
   const favorites = useSelector((state) => state.favoriteReducer);
   const isFavorited = favorites.find((favorite) => favorite.id === card.id);
   const dispatch = useDispatch();
@@ -24,6 +24,16 @@ const Card = ({ card }) => {
     }
   }
 
+  function handleClick() {
+    const isOrNot = playingSong.id === card.id;
+    console.log(isOrNot);
+    if (isOrNot) {
+      dispatch({ type: "HANDLE_PLAYER", payload: {} });
+    } else {
+      dispatch({ type: "HANDLE_PLAYER", payload: card });
+    }
+  }
+
   return (
     <Wrapper>
       <img src={card.album.cover_medium} alt="capa do album" />
@@ -32,7 +42,7 @@ const Card = ({ card }) => {
         <p>{card.artist.name}</p>
         <p>{convertedTime(card.duration)}</p>
       </Info>
-      <Buttons played={played}>
+      <Buttons>
         <a href={card.link} target="_blank" rel="noreferrer">
           <img
             src={deezerImg}
@@ -40,13 +50,10 @@ const Card = ({ card }) => {
             style={{ width: "33px" }}
           />
         </a>
-        <button className={played ? "playing" : "play"}>
-          {/* <img
-            className={played ? "active" : ""}
-            src={played ? playingImg : playImg}
-            alt="icone de play"
-          /> */}
-        </button>
+        <button
+          className={playingSong.id === card.id ? "playing" : "play"}
+          onClick={() => handleClick()}
+        ></button>
         <button onClick={() => handleFavorites(card)}>
           <img
             src={isFavorited ? favoritedImg : favoriteImg}

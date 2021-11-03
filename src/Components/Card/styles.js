@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import play from "../../Assets/play-icon.png";
+import stop from "../../Assets/stop-icon.png";
 import playing from "../../Assets/playing.gif";
 
 export const Wrapper = styled.div`
@@ -72,14 +73,17 @@ export const Buttons = styled.div`
 
   .play {
     background: url(${play}) no-repeat center;
+    transition: none;
     background-size: 25px;
   }
 
   .playing {
-    background: url(${playing}) no-repeat center;
-    background-size: 25px;
+    transition: none;
+    background: url(${playing}) no-repeat center center;
+    background-size: 40px;
     &:hover {
-      background: black;
+      background: url(${stop}) no-repeat center center;
+      background-size: 22px;
     }
   }
 `;

@@ -2,8 +2,10 @@ import React from "react";
 import Card from "../Card";
 import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
+import { useSelector } from "react-redux";
 
 const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
+  const player = useSelector((state) => state.playerReducer);
   return (
     <Wrapper className="main">
       {
@@ -20,7 +22,7 @@ const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
       <Arrow>
         <img src={arrowImg} alt="arrow icon" />
       </Arrow>
-      <Pagination>
+      <Pagination player={player}>
         <ul>
           {pageQuantity.map((number) => (
             <li key={number}>

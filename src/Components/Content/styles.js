@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.main`
   grid-area: content;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   scroll-behavior: smooth;
 `;
 
@@ -42,6 +42,8 @@ export const Pagination = styled.div`
   width: 100%;
   overflow-x: auto;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: ${({ player }) => (player.id ? "74px" : "20px")};
 
   &::-webkit-scrollbar {
     display: none;
