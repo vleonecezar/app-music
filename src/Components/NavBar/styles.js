@@ -21,13 +21,17 @@ export const Container = styled.nav`
   border-right: 1px solid grey;
   background: white;
 
-  > img {
-    width: 150px;
+  > div {
+    cursor: pointer;
     margin-top: 30px;
-  }
+    img {
+      width: 150px;
+    }
 
-  h2 {
-    margin-bottom: 20px;
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   ul {

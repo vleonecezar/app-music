@@ -42,6 +42,7 @@ function App() {
           />
         )}
         <NavBar
+          setAxiosOptions={setAxiosOptions}
           setFavoritesScreen={setFavoritesScreen}
           setCurrentPage={setCurrentPage}
           scrollTop={scrollTop}

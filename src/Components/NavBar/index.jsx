@@ -3,8 +3,14 @@ import { Wrapper, Container } from "./styles";
 import logoImg from "../../Assets/logo.png";
 import musicImg from "../../Assets/music-icon.png";
 import favoritesImg from "../../Assets/heart-icon.png";
+import { API_TOP_WORLD } from "../../Services/api";
 
-const NavBar = ({ setFavoritesScreen, setCurrentPage, scrollTop }) => {
+const NavBar = ({
+  setFavoritesScreen,
+  setCurrentPage,
+  scrollTop,
+  setAxiosOptions,
+}) => {
   function handleNavigation(value) {
     setFavoritesScreen(value);
     setCurrentPage(1);
@@ -14,8 +20,10 @@ const NavBar = ({ setFavoritesScreen, setCurrentPage, scrollTop }) => {
   return (
     <Wrapper>
       <Container>
-        <img src={logoImg} alt="logo" />
-        <h2>App Music</h2>
+        <div onClick={() => setAxiosOptions(API_TOP_WORLD)}>
+          <img src={logoImg} alt="logo" />
+          <h2>App Music</h2>
+        </div>
         <ul>
           <li>
             <a href="#" onClick={() => handleNavigation(false)}>
