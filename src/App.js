@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
 import { Layout } from "./app.styles";
 import Content from "./Components/Content";
 import FavoritesTittle from "./Components/FavoritesTittle";
 import NavBar from "./Components/NavBar";
+import Player from "./Components/Player";
 import SearchBar from "./Components/SearchBar";
 import useAxios from "./Hooks/useAxios";
 import usePagination from "./Hooks/usePagination";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
-  const dispatch = useDispatch();
-  const player = useSelector((state) => state.playerReducer);
   const [favoritesScreen, setFavoritesScreen] = useState(false);
   const { setAxiosOptions, loading, data, error } = useAxios();
   const {
@@ -56,15 +53,7 @@ function App() {
           pageQuantity={pageQuantity}
           handlePage={handlePage}
         />
-        {player.id && (
-          <audio
-            onEnded={() => dispatch({ type: "HANDLE_PLAYER", payload: {} })}
-            src={player.preview}
-            controls
-            autoPlay
-            onPlay={({ target }) => console.log((target.volume = 0.2))}
-          />
-        )}
+        <Player />
       </Layout>
     </>
   );

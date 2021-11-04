@@ -19,16 +19,4 @@ export const Layout = styled.div`
 
     grid-template-columns: 1fr;
   }
-
-  audio {
-    position: absolute;
-    z-index: 9999;
-    width: 80vw;
-    left: 10vw;
-    bottom: 0;
-  }
-
-  audio::-webkit-media-controls-panel {
-    background: rgba(0, 0, 0, 0.05);
-  }
 `;

@@ -29,6 +29,7 @@ const Card = ({ card }) => {
     console.log(isOrNot);
     if (isOrNot) {
       dispatch({ type: "HANDLE_PLAYER", payload: {} });
+      document.querySelector("audio").pause();
     } else {
       dispatch({ type: "HANDLE_PLAYER", payload: card });
     }
