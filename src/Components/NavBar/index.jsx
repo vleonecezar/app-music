@@ -20,7 +20,7 @@ const NavBar = ({
   return (
     <Wrapper>
       <Container>
-        <div onClick={() => setAxiosOptions(API_TOP_WORLD)}>
+        <div onClick={() => setAxiosOptions(API_TOP_WORLD)} title="Home">
           <img src={logoImg} alt="logo" />
           <h2>App Music</h2>
         </div>

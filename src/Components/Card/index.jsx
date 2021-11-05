@@ -48,16 +48,19 @@ const Card = ({ card }) => {
           <img
             src={deezerImg}
             alt="icone do Deezer"
+            title="Abrir no Deezer"
             style={{ width: "33px" }}
           />
         </a>
         <button
           className={playingSong.id === card.id ? "playing" : "play"}
+          title={playingSong.id ? "Stop" : "Play"}
           onClick={() => handleClick()}
         ></button>
         <button onClick={() => handleFavorites(card)}>
           <img
             src={isFavorited ? favoritedImg : favoriteImg}
+            title={isFavorited ? "Remover das favoritas" : "Favoritar"}
             alt="icone de coração"
           />
         </button>
