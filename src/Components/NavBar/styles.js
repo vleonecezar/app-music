@@ -24,6 +24,30 @@ export const Container = styled.nav`
   > div {
     cursor: pointer;
     margin-top: 30px;
+
+    &:hover {
+      color: red;
+      animation: animePhone 0.5s;
+
+      @keyframes animePhone {
+        0% {
+          transform: initial;
+        }
+        25% {
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+        75% {
+          transform: rotate(5deg);
+        }
+        100% {
+          transform: initial;
+        }
+      }
+    }
+
     img {
       width: 150px;
     }
