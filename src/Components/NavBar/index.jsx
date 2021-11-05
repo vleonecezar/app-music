@@ -11,31 +11,44 @@ const NavBar = ({
   scrollTop,
   setAxiosOptions,
 }) => {
-  function handleNavigation(value) {
+  function handleNavigation(id, value) {
+    if (id === "home") setAxiosOptions(API_TOP_WORLD);
     setFavoritesScreen(value);
     setCurrentPage(1);
     scrollTop();
   }
-  /* CONSERTAR REDIRECIONAMETO PARA HOME !!!!!!!!!!!!!!!!!!!! */
+
   return (
     <Wrapper>
       <Container>
-        <div onClick={() => setAxiosOptions(API_TOP_WORLD)} title="Home">
+        <div
+          id="home"
+          onClick={({ currentTarget }) =>
+            handleNavigation(currentTarget.id, false)
+          }
+          title="Home"
+        >
           <img src={logoImg} alt="logo" />
           <h2>App Music</h2>
         </div>
         <ul>
           <li>
-            <a href="#" onClick={() => handleNavigation(false)}>
+            <button
+              id="songs"
+              onClick={({ target }) => handleNavigation(target.id, false)}
+            >
               <img src={musicImg} alt="icone de música" />
               Músicas
-            </a>
+            </button>
           </li>
           <li>
-            <a href="#" onClick={() => handleNavigation(true)}>
+            <button
+              id="favorites"
+              onClick={({ target }) => handleNavigation(target.id, true)}
+            >
               <img src={favoritesImg} alt="icone de coração" />
               Favoritas
-            </a>
+            </button>
           </li>
         </ul>
       </Container>

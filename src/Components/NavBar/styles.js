@@ -42,12 +42,15 @@ export const Container = styled.nav`
         margin-top: 15px;
       }
 
-      a {
+      button {
         display: flex;
         align-items: center;
         font-size: 1.1rem;
         font-weight: 400;
         color: black;
+        background: transparent;
+        border: none;
+        cursor: pointer;
         transition: 0.3s;
         &:hover {
           color: red;
@@ -87,7 +90,7 @@ export const Container = styled.nav`
           margin: 0;
         }
 
-        a {
+        button {
           display: block;
           text-align: center;
           padding: 10px 0;
