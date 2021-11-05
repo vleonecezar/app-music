@@ -16,7 +16,7 @@ const NavBar = ({
     setCurrentPage(1);
     scrollTop();
   }
-
+  /* CONSERTAR REDIRECIONAMETO PARA HOME !!!!!!!!!!!!!!!!!!!! */
   return (
     <Wrapper>
       <Container>

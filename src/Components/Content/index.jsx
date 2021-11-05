@@ -1,11 +1,28 @@
 import React from "react";
 import Card from "../Card";
-import { Wrapper, CardsList, Pagination, Arrow } from "./styles";
+import {
+  Wrapper,
+  CardsList,
+  Pagination,
+  Arrow,
+  Error,
+  Loading,
+} from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
 import { useSelector } from "react-redux";
 
-const Content = ({ currentCards, currentPage, pageQuantity, handlePage }) => {
+const Content = ({
+  currentCards,
+  currentPage,
+  pageQuantity,
+  handlePage,
+  error,
+  loading,
+}) => {
   const player = useSelector((state) => state.playerReducer);
+
+  if (error) return <Error>{error}</Error>;
+  if (loading) return <Loading />;
   return (
     <Wrapper className="main">
       {

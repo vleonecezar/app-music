@@ -6,7 +6,7 @@ const useAxios = () => {
   const [axiosOptions, setAxiosOptions] = useState(API_TOP_WORLD);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     async function getData() {
@@ -17,8 +17,7 @@ const useAxios = () => {
         setData(response.data.data);
       } catch (err) {
         console.error(err);
-        setError(true);
-        console.error("Erro ao tentar buscar informações");
+        setError("Erro ao tentar buscar informações");
       } finally {
         setLoading(false);
       }

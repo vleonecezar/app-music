@@ -48,6 +48,8 @@ function App() {
           scrollTop={scrollTop}
         />
         <Content
+          loading={loading}
+          error={error}
           currentCards={currentCards}
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}

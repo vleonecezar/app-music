@@ -7,6 +7,29 @@ export const Wrapper = styled.main`
   scroll-behavior: smooth;
 `;
 
+export const Error = styled.p`
+  grid-area: content;
+  text-align: center;
+  margin-top: 50px;
+`;
+
+export const Loading = styled.div`
+  grid-area: content;
+  width: 50px;
+  height: 50px;
+  margin: 200px auto;
+  border: 10px solid grey;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading 0.6s infinite linear;
+
+  @keyframes loading {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
 export const CardsList = styled.div`
   max-width: 1400px;
   margin: 0 auto;
