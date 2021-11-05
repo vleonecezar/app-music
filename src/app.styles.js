@@ -6,7 +6,7 @@ export const Layout = styled.div`
   grid-template-areas:
     "nav search"
     "nav content";
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 50px 1fr;
   width: 100vw;
   height: 100vh;

@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
     display: none;
     align-items: flex-start;
     justify-content: flex-end;
-    width: 100vw;
-    height: 100vh;
+    /*     width: 100vw;
+    height: 100vh; */
     background: rgba(0, 0, 0, 0.1);
   }
 `;
@@ -49,12 +49,13 @@ export const Container = styled.nav`
     }
 
     img {
-      width: 150px;
+      width: 180px;
     }
 
     h2 {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       text-align: center;
+      font-size: 1.6rem;
     }
   }
 
@@ -63,13 +64,13 @@ export const Container = styled.nav`
 
     li {
       & + li {
-        margin-top: 15px;
+        margin-top: 20px;
       }
 
       button {
         display: flex;
         align-items: center;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 400;
         color: black;
         background: transparent;
@@ -82,7 +83,7 @@ export const Container = styled.nav`
 
         img {
           width: 20px;
-          margin-right: 8px;
+          margin-right: 10px;
         }
       }
     }

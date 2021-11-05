@@ -26,7 +26,7 @@ const NavBar = ({
           onClick={({ currentTarget }) =>
             handleNavigation(currentTarget.id, false)
           }
-          title="Home"
+          title="Top Músicas"
         >
           <img src={logoImg} alt="logo" />
           <h2>App Music</h2>

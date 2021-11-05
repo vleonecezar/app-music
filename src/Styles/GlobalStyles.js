@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
         :root {
           // Waiting for colors  
         }
+    }
+
+    body, button {
         font-family: 'Poppins', sans-serif; 
     }
 
