@@ -1,30 +1,46 @@
 import styled from "styled-components";
 
-export const PlayerA = styled.audio`
+export const PlayerA = styled.div`
   position: absolute;
   z-index: 9999;
-  width: 80vw;
+  bottom: -7px;
   left: 10vw;
-  bottom: 0;
   animation: playerAnimation 0.7s;
 
-  @keyframes playerAnimation {
-    0% {
-      opacity: 0.8;
-      bottom: -50px;
-      transform: scale(0.9);
-    }
-    25% {
-      bottom: 10px;
-    }
-    100% {
-      opacity: 1;
-      bottom: 0;
-      transform: scale(1);
-    }
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80vw;
+    position: absolute;
+    z-index: 9999;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 100px;
   }
 
-  &::-webkit-media-controls-panel {
-    background: rgba(0, 0, 0, 0.05);
+  audio {
+    width: 80vw;
+
+    @keyframes playerAnimation {
+      0% {
+        opacity: 0.8;
+        bottom: -50px;
+        transform: scale(0.9);
+      }
+      25% {
+        bottom: 10px;
+      }
+      100% {
+        opacity: 1;
+        bottom: -7px;
+        transform: scale(1);
+      }
+    }
+
+    &::-webkit-media-controls-panel {
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 `;

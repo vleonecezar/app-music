@@ -9,14 +9,19 @@ const Player = () => {
 
   if (!playerr.id) return null;
   return (
-    <PlayerA
-      playerr={playerr.id}
-      onEnded={() => dispatch({ type: "HANDLE_PLAYER", payload: {} })}
-      src={playerr.id ? playerr.preview : ""}
-      controls
-      autoPlay
-      onPlay={({ target }) => (target.volume = 0.2)}
-    />
+    <PlayerA>
+      <p title={playerr.title_short}>
+        {playerr.artist.name} - {playerr.title_short}
+      </p>
+      <audio
+        playerr={playerr.id}
+        onEnded={() => dispatch({ type: "HANDLE_PLAYER", payload: {} })}
+        src={playerr.id ? playerr.preview : ""}
+        controls
+        autoPlay
+        onPlay={({ target }) => (target.volume = 0.15)}
+      />
+    </PlayerA>
   );
 };
 

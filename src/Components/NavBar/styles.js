@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   @media (max-width: 800px) {
     position: absolute;
-    display: none;
+    z-index: 999;
+    display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    /*     width: 100vw;
-    height: 100vh; */
-    background: rgba(0, 0, 0, 0.1);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
   }
 `;
 
@@ -99,8 +100,11 @@ export const Container = styled.nav`
     border-bottom-left-radius: 5px;
     height: initial;
 
-    h2 {
-      margin-bottom: 40px;
+    > div {
+      margin: 0;
+      &:hover {
+        animation: none;
+      }
     }
 
     ul {
@@ -109,14 +113,16 @@ export const Container = styled.nav`
       margin: 0;
 
       li {
-        display: block;
+        width: 100%;
+        display: inline-block;
         border-top: 1px solid grey;
         & + li {
           margin: 0;
         }
 
         button {
-          display: block;
+          width: 100%;
+          display: inline-block;
           text-align: center;
           padding: 10px 0;
         }
