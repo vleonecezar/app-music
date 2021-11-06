@@ -24,7 +24,7 @@ export const Layout = styled.div`
 export const MobileMenuIcon = styled.div`
   position: absolute;
   z-index: 9999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   right: 10px;
@@ -45,5 +45,9 @@ export const MobileMenuIcon = styled.div`
     transition: 0.3s;
 
     ${({ mobileMenu }) => mobileMenu && "transform: rotate(90deg);"}
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
   }
 `;
