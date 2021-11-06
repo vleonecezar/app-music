@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   border-radius: 10px;
   padding: 15px 30px;
   margin: 20px 13px;
-  transition: 0.2s;
+  transition: 0.3s;
   width: 280px;
   height: 450px;
 
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   }
 
   &:hover {
-    transform: scale(1.02);
+    box-shadow: 1px 1px 5px black, -1px 1px 5px black;
   }
 
   animation: slideInFromLeft 0.3s;
@@ -40,7 +40,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 800px) {
     &:hover {
-      transform: unset;
+      box-shadow: none;
     }
   }
 `;
@@ -81,7 +81,7 @@ export const Buttons = styled.div`
     transition: 0.1s ease-out;
 
     img {
-      /* width: 25px; */
+      width: 25px;
     }
 
     &:active {
