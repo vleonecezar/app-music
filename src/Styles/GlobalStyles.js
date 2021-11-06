@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
         :root {
           // Waiting for colors  
         }
+        -webkit-tap-highlight-color: transparent;
     }
 
     body, button {

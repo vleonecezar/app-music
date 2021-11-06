@@ -37,6 +37,12 @@ export const Wrapper = styled.div`
       transform: scale(1);
     }
   }
+
+  @media (max-width: 800px) {
+    &:hover {
+      transform: unset;
+    }
+  }
 `;
 
 export const Info = styled.div`
@@ -92,11 +98,17 @@ export const Buttons = styled.div`
 
   .playing {
     transition: none;
-    background: url(${playing}) no-repeat center center;
-    background-size: 40px;
-    &:hover {
-      background: url(${stop}) no-repeat center center;
-      background-size: 22px;
+    background: url(${stop}) no-repeat center center;
+    background-size: 22px;
+
+    @media (min-width: 800px) {
+      background: url(${playing}) no-repeat center center;
+      background-size: 40px;
+
+      &:hover {
+        background: url(${stop}) no-repeat center center;
+        background-size: 22px;
+      }
     }
   }
 `;
