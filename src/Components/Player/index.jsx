@@ -11,7 +11,7 @@ const Player = () => {
   return (
     <PlayerA>
       <p title={playerr.title_short}>
-        {playerr.artist.name} - {playerr.title_short}
+        {playerr.title_short} - {playerr.artist.name}
       </p>
       <audio
         playerr={playerr.id}

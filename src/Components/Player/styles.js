@@ -17,7 +17,7 @@ export const PlayerA = styled.div`
     font-size: 0.9rem;
     font-weight: 500;
     text-align: center;
-    padding: 0 100px;
+    padding: 0 80px;
   }
 
   audio {
