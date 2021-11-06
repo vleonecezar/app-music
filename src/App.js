@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Layout } from "./app.styles";
+import { Layout, MobileMenuIcon } from "./app.styles";
 import Content from "./Components/Content";
 import FavoritesTittle from "./Components/FavoritesTittle";
 import NavBar from "./Components/NavBar";
@@ -10,6 +10,7 @@ import usePagination from "./Hooks/usePagination";
 import { GlobalStyle } from "./Styles/GlobalStyles";
 
 function App() {
+  const [mobileMenu, setMobileMenu] = useState(false);
   const [favoritesScreen, setFavoritesScreen] = useState(false);
   const { setAxiosOptions, loading, data, error } = useAxios();
   const {
@@ -32,6 +33,10 @@ function App() {
     <>
       <GlobalStyle />
       <Layout>
+        <MobileMenuIcon
+          mobileMenu={mobileMenu}
+          onClick={() => setMobileMenu(!mobileMenu)}
+        />
         {favoritesScreen ? (
           <FavoritesTittle />
         ) : (
@@ -46,6 +51,8 @@ function App() {
           setFavoritesScreen={setFavoritesScreen}
           setCurrentPage={setCurrentPage}
           scrollTop={scrollTop}
+          mobileMenu={mobileMenu}
+          setMobileMenu={setMobileMenu}
         />
         <Content
           loading={loading}

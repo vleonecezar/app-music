@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   @media (max-width: 800px) {
     position: absolute;
     z-index: 999;
-    display: flex;
+    display: ${({ mobileMenu }) => (mobileMenu ? "flex" : "none")};
     align-items: flex-start;
     justify-content: flex-end;
     width: 100vw;
@@ -91,14 +91,22 @@ export const Container = styled.nav`
   }
 
   @media (max-width: 800px) {
+    display: ${({ mobileMenu }) => (mobileMenu ? "flex" : "none")};
     position: relative;
-    top: 50px;
+    top: -310px;
     width: 200px;
     border: none;
     border-left: 1px solid grey;
     border-bottom: 1px solid grey;
     border-bottom-left-radius: 5px;
     height: initial;
+    animation: slide 0.3s forwards;
+
+    @keyframes slide {
+      to {
+        top: 50px;
+      }
+    }
 
     > div {
       margin: 0;

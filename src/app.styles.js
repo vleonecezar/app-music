@@ -20,3 +20,30 @@ export const Layout = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+export const MobileMenuIcon = styled.div`
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  top: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background: grey;
+
+  &:after {
+    content: "";
+    display: block;
+    width: ${({ mobileMenu }) => (mobileMenu ? "4px" : "23px")};
+    height: ${({ mobileMenu }) => (mobileMenu ? "4px" : "3px")};
+    border-radius: 5px;
+    background: black;
+    box-shadow: 0 -7px black, 0 7px black;
+    transition: 0.3s;
+
+    ${({ mobileMenu }) => mobileMenu && "transform: rotate(90deg);"}
+  }
+`;

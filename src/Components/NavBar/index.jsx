@@ -10,6 +10,8 @@ const NavBar = ({
   setCurrentPage,
   scrollTop,
   setAxiosOptions,
+  mobileMenu,
+  setMobileMenu,
 }) => {
   function handleNavigation(id, value) {
     if (id === "home") setAxiosOptions(API_TOP_WORLD);
@@ -19,8 +21,8 @@ const NavBar = ({
   }
 
   return (
-    <Wrapper>
-      <Container>
+    <Wrapper mobileMenu={mobileMenu} onClick={() => setMobileMenu(false)}>
+      <Container mobileMenu={mobileMenu}>
         <div
           id="home"
           onClick={({ currentTarget }) =>

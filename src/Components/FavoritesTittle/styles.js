@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.h1`
   position: relative;
-  z-index: 9999;
+  z-index: 9000;
   background: white;
   grid-area: search;
   display: flex;

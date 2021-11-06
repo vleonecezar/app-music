@@ -36,9 +36,11 @@ const Content = ({
           </ul>
         </CardsList>
       }
-      <Arrow>
-        <img src={arrowImg} alt="arrow icon" />
-      </Arrow>
+      {pageQuantity.length > 7 && (
+        <Arrow>
+          <img src={arrowImg} alt="arrow icon" />
+        </Arrow>
+      )}
       <Pagination player={player}>
         <ul>
           {pageQuantity.map((number) => (
