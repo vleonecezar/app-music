@@ -31,6 +31,12 @@ export const Loading = styled.div`
   }
 `;
 
+export const Empty = styled.p`
+  grid-area: content;
+  text-align: center;
+  margin-top: 50px;
+`;
+
 export const CardsList = styled.div`
   max-width: 1400px;
   margin: 0 auto;

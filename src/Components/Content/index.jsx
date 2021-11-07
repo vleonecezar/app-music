@@ -7,6 +7,7 @@ import {
   Arrow,
   Error,
   Loading,
+  Empty,
 } from "./styles";
 import arrowImg from "../../Assets/arrow-icon.png";
 import { useSelector } from "react-redux";
@@ -21,8 +22,10 @@ const Content = ({
 }) => {
   const player = useSelector((state) => state.playerReducer);
 
-  if (error) return <Error>{error}</Error>;
-  if (loading) return <Loading />;
+  if (error) return <Error className="main">{error}</Error>;
+  if (loading) return <Loading className="main" />;
+  if (currentCards.length === 0)
+    return <Empty className="main">Nenhuma Música Aqui =(</Empty>;
   return (
     <Wrapper className="main">
       {
