@@ -44,6 +44,7 @@ function App() {
             setAxiosOptions={setAxiosOptions}
             setCurrentPage={setCurrentPage}
             scrollTop={scrollTop}
+            setMobileMenu={setMobileMenu}
           />
         )}
         <NavBar
