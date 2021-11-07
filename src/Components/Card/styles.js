@@ -23,7 +23,8 @@ export const Wrapper = styled.div`
   }
 
   &:hover {
-    box-shadow: 1px 1px 4px black, -1px 1px 4px black;
+    box-shadow: 1px 1px 4px var(--border-color),
+      -1px 1px 4px var(--border-color);
     background-color: transparent;
   }
 
@@ -119,6 +120,13 @@ export const Buttons = styled.div`
         background-color: var(--bg-color);
         background-size: 22px;
       }
+    }
+  }
+
+  @media (max-width: 800px) {
+    a:hover,
+    button:hover {
+      background-color: var(--bg-color);
     }
   }
 `;

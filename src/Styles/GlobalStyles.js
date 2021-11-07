@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --bg-color: white;
+        --bg-color: #ffffff;
         --border-color: rgba(0,0,0,.3);
     }
 

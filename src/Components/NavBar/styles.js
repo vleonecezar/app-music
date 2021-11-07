@@ -110,7 +110,7 @@ export const Container = styled.nav`
     }
 
     > div {
-      margin: 0;
+      margin-top: 0;
       &:hover {
         animation: none;
       }
