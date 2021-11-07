@@ -1,11 +1,15 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
+    :root {
+        --bg-color: white;
+        --border-color: rgba(0,0,0,.3);
+    }
+
     body {
-        :root {
-          // Waiting for colors  
-        }
+        -webkit-font-smoothing: antialiased;
         -webkit-tap-highlight-color: transparent;
+        cursor: default;
     }
 
     body, button {

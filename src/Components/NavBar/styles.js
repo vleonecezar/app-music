@@ -19,12 +19,13 @@ export const Container = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-right: 1px solid grey;
-  background: white;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--bg-color);
 
   > div {
     cursor: pointer;
     margin-top: 30px;
+    margin-bottom: 25px;
 
     &:hover {
       color: red;
@@ -54,15 +55,15 @@ export const Container = styled.nav`
     }
 
     h2 {
-      margin-bottom: 25px;
       text-align: center;
       font-size: 1.6rem;
     }
   }
 
   ul {
-    margin-top: 20px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     li {
       & + li {
         margin-top: 20px;
@@ -72,7 +73,7 @@ export const Container = styled.nav`
         display: flex;
         align-items: center;
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 500;
         color: black;
         background: transparent;
         border: none;
@@ -123,7 +124,7 @@ export const Container = styled.nav`
       li {
         width: 100%;
         display: inline-block;
-        border-top: 1px solid grey;
+        border-top: 1px solid var(--border-color);
         & + li {
           margin: 0;
         }

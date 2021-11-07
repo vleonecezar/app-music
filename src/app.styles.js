@@ -32,7 +32,7 @@ export const MobileMenuIcon = styled.div`
   width: 32px;
   height: 32px;
   border-radius: 5px;
-  background: grey;
+  background-color: var(--border-color);
 
   &:after {
     content: "";

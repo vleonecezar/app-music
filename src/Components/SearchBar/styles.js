@@ -6,8 +6,8 @@ export const Wrapper = styled.form`
   grid-area: search;
   display: flex;
   align-items: center;
-  background: white;
-  border-bottom: 1px solid grey;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
   padding-left: 8px;
 
   button {
@@ -17,11 +17,11 @@ export const Wrapper = styled.form`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background: transparent;
+    background-color: var(--bg-color);
     border: none;
 
     img {
-      width: 24px;
+      width: 22px;
     }
   }
 
@@ -32,5 +32,11 @@ export const Wrapper = styled.form`
     outline: none;
     padding-left: 8px;
     font-size: 1.07rem;
+    background-color: var(--bg-color);
+
+    &::placeholder {
+      color: var(--border-color);
+      font-size: 1.1rem;
+    }
   }
 `;

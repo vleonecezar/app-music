@@ -8,13 +8,14 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 15px 30px;
   margin: 20px 13px;
-  transition: 0.3s;
+  transition: 0.2s;
   width: 280px;
   height: 450px;
+  background-color: rgba(0, 0, 0, 0.02);
 
   > img {
     max-width: 220px;
@@ -22,7 +23,8 @@ export const Wrapper = styled.div`
   }
 
   &:hover {
-    box-shadow: 1px 1px 5px black, -1px 1px 5px black;
+    box-shadow: 1px 1px 4px black, -1px 1px 4px black;
+    background-color: transparent;
   }
 
   animation: slideInFromLeft 0.3s;
@@ -77,21 +79,28 @@ export const Buttons = styled.div`
     width: 43px;
     height: 43px;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid var(--border-color);
     transition: 0.1s ease-out;
+    background-color: var(--bg-color);
 
     img {
       width: 25px;
     }
 
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
     &:active {
-      box-shadow: 0 -2px 3px black, -2px 0px 3px black;
+      box-shadow: 0 -2px 3px var(--border-color),
+        -2px 0px 3px var(--border-color);
       transform: scale(0.93);
     }
   }
 
   .play {
     background: url(${play}) no-repeat center;
+    background-color: var(--bg-color);
     transition: none;
     background-size: 25px;
   }
@@ -107,6 +116,7 @@ export const Buttons = styled.div`
 
       &:hover {
         background: url(${stop}) no-repeat center center;
+        background-color: var(--bg-color);
         background-size: 22px;
       }
     }

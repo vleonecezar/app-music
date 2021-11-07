@@ -5,6 +5,7 @@ export const Wrapper = styled.main`
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  background-color: var(--bg-color);
 `;
 
 export const Error = styled.p`
@@ -18,7 +19,7 @@ export const Loading = styled.div`
   width: 50px;
   height: 50px;
   margin: 200px auto;
-  border: 10px solid grey;
+  border: 10px solid var(--border-color);
   border-top-color: transparent;
   border-radius: 50%;
   animation: loading 0.6s infinite linear;
@@ -76,26 +77,24 @@ export const Pagination = styled.div`
     display: inline-flex;
     li {
       button {
+        background-color: var(--bg-color);
         display: flex;
         font-size: 1.02em;
         justify-content: center;
         align-items: center;
         width: 30px;
         height: 30px;
-        border: 1px solid black;
+        border: 1px solid var(--border-color);
         border-radius: 50%;
         margin: 0 10px;
         cursor: pointer;
 
         &:disabled {
-          color: white;
-          background: grey;
+          color: var(--bg-color);
+          background: var(--border-color);
+          cursor: default;
         }
       }
-    }
-
-    .active {
-      background: grey;
     }
   }
 `;
