@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import convertedTime from "../../Helpers/formatMinutes";
+import { convertedTime } from "../../Helpers";
 import { Wrapper, Info, Buttons } from "./styles";
 import deezerImg from "../../Assets/deezer-icon.png";
 import favoriteImg from "../../Assets/favorite-icon.png";

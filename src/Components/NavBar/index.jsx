@@ -1,5 +1,6 @@
 import React from "react";
 import { API_TOP_WORLD } from "../../Services/api";
+import { scrollTop } from "../../Helpers";
 import { Wrapper, Container } from "./styles";
 import logoImg from "../../Assets/logo.png";
 import musicImg from "../../Assets/music-icon.png";
@@ -11,7 +12,6 @@ const NavBar = ({
   setAxiosOptions,
   setFavoritesScreen,
   setCurrentPage,
-  scrollTop,
 }) => {
   function handleNavigation(id, value) {
     if (id === "home") setAxiosOptions(API_TOP_WORLD);

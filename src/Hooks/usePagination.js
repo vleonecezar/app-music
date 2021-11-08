@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { scrollTop } from "../Helpers";
 
 const usePagination = (songs, favoritesScreen) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,10 +20,6 @@ const usePagination = (songs, favoritesScreen) => {
   function handlePages(number) {
     setCurrentPage(number);
     scrollTop();
-  }
-
-  function scrollTop() {
-    document.querySelector(".main").scrollTo(0, 0);
   }
 
   return {
