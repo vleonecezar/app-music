@@ -1,4 +1,4 @@
-export function convertedTime(time) {
+export function convertedMinutes(time) {
   return (time - (time %= 60)) / 60 + (9 < time ? ":" : ":0") + time;
 }
 

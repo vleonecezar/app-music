@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { convertedTime } from "../../Helpers";
+import { convertedMinutes } from "../../Helpers";
 import { Wrapper, Info, Buttons } from "./styles";
 import deezerImg from "../../Assets/deezer-icon.png";
 import favoriteImg from "../../Assets/favorite-icon.png";
@@ -7,7 +7,7 @@ import favoritedImg from "../../Assets/favorite-icon-red.png";
 
 const Card = ({ card }) => {
   const playingSong = useSelector((state) => state.playerReducer);
-  const favorites = useSelector((state) => state.favoriteReducer);
+  const favorites = useSelector((state) => state.favoritesReducer);
   const isFavorited = favorites.find((favorite) => favorite.id === card.id);
   const dispatch = useDispatch();
 
@@ -35,7 +35,7 @@ const Card = ({ card }) => {
       <Info>
         <p title={card.title_short}>{card.title_short}</p>
         <p>{card.artist.name}</p>
-        <p>{convertedTime(card.duration)}</p>
+        <p>{convertedMinutes(card.duration)}</p>
       </Info>
       <Buttons>
         <a href={card.link} target="_blank" rel="noreferrer">

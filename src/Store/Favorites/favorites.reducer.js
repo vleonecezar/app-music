@@ -1,4 +1,4 @@
-export function favoriteReducer(state = [], action) {
+export function favoritesReducer(state = [], action) {
   switch (action.type) {
     case "ADD_FAVORITE":
       return [...state, action.payload];

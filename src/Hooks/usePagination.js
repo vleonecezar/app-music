@@ -4,14 +4,14 @@ import { scrollTop } from "../Helpers";
 
 const usePagination = (songs, favoritesScreen) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const favoritesSongs = useSelector((state) => state.favoriteReducer);
+  const favoritesSongs = useSelector((state) => state.favoritesReducer);
 
   const cards = favoritesScreen ? favoritesSongs : songs;
   const cardsPerPage = 12;
 
   const lastIndex = currentPage * cardsPerPage;
-  const FirstIndex = lastIndex - cardsPerPage;
-  const currentCards = cards.slice(FirstIndex, lastIndex);
+  const firstIndex = lastIndex - cardsPerPage;
+  const currentCards = cards.slice(firstIndex, lastIndex);
 
   const pagesQuantity = Array(Math.ceil(cards.length / cardsPerPage))
     .fill()

@@ -1,17 +1,17 @@
 import { createStore, combineReducers } from "redux";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import { favoriteReducer } from "./Favorites/favorites.reducer";
+import { favoritesReducer } from "./Favorites/favorites.reducer";
 import { playerReducer } from "./Player/player.reducer";
 
 const persistConfig = {
   key: "root",
   storage: storage,
-  whitelist: ["favoriteReducer"],
+  whitelist: ["favoritesReducer"],
 };
 
 const rootReducer = combineReducers({
-  favoriteReducer,
+  favoritesReducer,
   playerReducer,
 });
 
