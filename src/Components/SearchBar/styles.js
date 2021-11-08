@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
-  z-index: 9000;
+  z-index: 100;
   grid-area: search;
 
   form {

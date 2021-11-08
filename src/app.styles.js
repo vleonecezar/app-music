@@ -23,7 +23,7 @@ export const Layout = styled.div`
 
 export const MobileMenuIcon = styled.div`
   position: absolute;
-  z-index: 9999;
+  z-index: 300;
   display: none;
   justify-content: center;
   align-items: center;
@@ -54,7 +54,7 @@ export const MobileMenuIcon = styled.div`
 
 export const FavoritesTitle = styled.h2`
   position: relative;
-  z-index: 9000;
+  z-index: 100;
   background-color: var(--bg-color);
   grid-area: search;
   display: flex;

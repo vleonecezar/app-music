@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: fixed;
-  z-index: 9999;
+  z-index: 100;
   bottom: -7px;
   left: 10vw;
   animation: playerAnimation 0.7s;
