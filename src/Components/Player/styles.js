@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   bottom: -7px;
   left: 10vw;
