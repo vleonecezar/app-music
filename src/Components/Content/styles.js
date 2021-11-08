@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
-  grid-area: content;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  background-color: var(--bg-color);
-`;
-
 export const Error = styled.p`
   grid-area: content;
   text-align: center;
@@ -35,6 +27,14 @@ export const Empty = styled.p`
   grid-area: content;
   text-align: center;
   margin-top: 50px;
+`;
+
+export const Wrapper = styled.main`
+  grid-area: content;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
 `;
 
 export const CardsList = styled.div`

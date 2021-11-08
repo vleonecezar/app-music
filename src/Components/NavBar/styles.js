@@ -29,7 +29,10 @@ export const Container = styled.nav`
 
     &:hover {
       color: red;
-      animation: animePhone 0.5s;
+
+      img {
+        animation: animePhone 0.5s;
+      }
 
       @keyframes animePhone {
         0% {
@@ -74,18 +77,18 @@ export const Container = styled.nav`
         align-items: center;
         font-size: 1.2rem;
         font-weight: 500;
-        color: black;
         background: transparent;
         border: none;
         cursor: pointer;
         transition: 0.3s;
-        &:hover {
-          color: red;
-        }
 
         img {
           width: 20px;
           margin-right: 10px;
+        }
+
+        &:hover {
+          color: red;
         }
       }
     }
@@ -101,9 +104,9 @@ export const Container = styled.nav`
     border-bottom: 1px solid grey;
     border-bottom-left-radius: 5px;
     height: initial;
-    animation: slide 0.3s forwards;
+    animation: slideDown 0.3s forwards;
 
-    @keyframes slide {
+    @keyframes slideDown {
       to {
         top: 50px;
       }
@@ -111,6 +114,7 @@ export const Container = styled.nav`
 
     > div {
       margin-top: 0;
+
       &:hover {
         animation: none;
       }
@@ -125,6 +129,7 @@ export const Container = styled.nav`
         width: 100%;
         display: inline-block;
         border-top: 1px solid var(--border-color);
+
         & + li {
           margin: 0;
         }

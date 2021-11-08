@@ -1,27 +1,27 @@
 import React from "react";
-import { PlayerA } from "./styles";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
+import { Wrapper } from "./styles";
 
 const Player = () => {
-  const playerr = useSelector((state) => state.playerReducer);
+  const songPlaying = useSelector((state) => state.playerReducer);
   const dispatch = useDispatch();
 
-  if (!playerr.id) return null;
+  if (!songPlaying.id) return null;
   return (
-    <PlayerA>
-      <p title={playerr.title_short}>
-        {playerr.title_short} - {playerr.artist.name}
+    <Wrapper>
+      <p title={songPlaying.title_short}>
+        {songPlaying.title_short} - {songPlaying.artist.name}
       </p>
       <audio
-        playerr={playerr.id}
+        player={songPlaying.id}
         onEnded={() => dispatch({ type: "HANDLE_PLAYER", payload: {} })}
-        src={playerr.id ? playerr.preview : ""}
+        src={songPlaying.id ? songPlaying.preview : ""}
         controls
         autoPlay
         onPlay={({ target }) => (target.volume = 0.15)}
       />
-    </PlayerA>
+    </Wrapper>
   );
 };
 

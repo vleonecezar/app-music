@@ -1,22 +1,22 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-const usePagination = (items, favoritesScreen) => {
+const usePagination = (songs, favoritesScreen) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const favorites = useSelector((state) => state.favoriteReducer);
+  const favoritesSongs = useSelector((state) => state.favoriteReducer);
 
-  const cards = favoritesScreen ? favorites : items;
-  const itemsPerPage = 12;
+  const cards = favoritesScreen ? favoritesSongs : songs;
+  const cardsPerPage = 12;
 
-  const lastIndexOfPage = currentPage * itemsPerPage;
-  const FirstIndexOfPage = lastIndexOfPage - itemsPerPage;
-  const currentCards = cards.slice(FirstIndexOfPage, lastIndexOfPage);
+  const lastIndex = currentPage * cardsPerPage;
+  const FirstIndex = lastIndex - cardsPerPage;
+  const currentCards = cards.slice(FirstIndex, lastIndex);
 
-  const pageQuantity = Array(Math.ceil(cards.length / itemsPerPage))
+  const pagesQuantity = Array(Math.ceil(cards.length / cardsPerPage))
     .fill()
     .map((_, i) => i + 1);
 
-  function handlePage(number) {
+  function handlePages(number) {
     setCurrentPage(number);
     scrollTop();
   }
@@ -26,12 +26,12 @@ const usePagination = (items, favoritesScreen) => {
   }
 
   return {
-    currentCards,
     currentPage,
     setCurrentPage,
-    pageQuantity,
-    itemsPerPage,
-    handlePage,
+    cardsPerPage,
+    currentCards,
+    pagesQuantity,
+    handlePages,
     scrollTop,
   };
 };

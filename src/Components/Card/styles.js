@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import play from "../../Assets/play-icon.png";
-import stop from "../../Assets/stop-icon.png";
 import playing from "../../Assets/playing.gif";
+import stop from "../../Assets/stop-icon.png";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -117,7 +117,7 @@ export const Buttons = styled.div`
 
       &:hover {
         background: url(${stop}) no-repeat center center;
-        background-color: var(--bg-color);
+        background-color: rgba(0, 0, 0, 0.1);
         background-size: 22px;
       }
     }

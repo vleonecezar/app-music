@@ -1,33 +1,29 @@
-import { useEffect, useState } from "react";
-import { Layout, MobileMenuIcon } from "./app.styles";
-import Content from "./Components/Content";
-import FavoritesTittle from "./Components/FavoritesTittle";
-import NavBar from "./Components/NavBar";
-import Player from "./Components/Player";
-import SearchBar from "./Components/SearchBar";
+import { GlobalStyle } from "./Styles/GlobalStyles";
+import { Layout, MobileMenuIcon, FavoritesTitle } from "./app.styles";
 import useAxios from "./Hooks/useAxios";
 import usePagination from "./Hooks/usePagination";
-import { GlobalStyle } from "./Styles/GlobalStyles";
+import { useEffect, useState } from "react";
+import SearchBar from "./Components/SearchBar";
+import NavBar from "./Components/NavBar";
+import Content from "./Components/Content";
+import Player from "./Components/Player";
 
 function App() {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [favoritesScreen, setFavoritesScreen] = useState(false);
   const { setAxiosOptions, loading, data, error } = useAxios();
   const {
-    currentCards,
     currentPage,
     setCurrentPage,
-    pageQuantity,
-    handlePage,
-    itemsPerPage,
+    currentCards,
+    pagesQuantity,
+    handlePages,
     scrollTop,
   } = usePagination(data, favoritesScreen);
 
   useEffect(() => {
-    console.log(currentCards.length);
-    console.log(itemsPerPage);
     if (currentCards.length === 0) setCurrentPage(1);
-  }, [currentCards, itemsPerPage, setCurrentPage]);
+  }, [currentCards, setCurrentPage]);
 
   return (
     <>
@@ -38,7 +34,7 @@ function App() {
           onClick={() => setMobileMenu(!mobileMenu)}
         />
         {favoritesScreen ? (
-          <FavoritesTittle />
+          <FavoritesTitle>Favoritas</FavoritesTitle>
         ) : (
           <SearchBar
             setAxiosOptions={setAxiosOptions}
@@ -48,21 +44,20 @@ function App() {
           />
         )}
         <NavBar
+          mobileMenu={mobileMenu}
+          setMobileMenu={setMobileMenu}
           setAxiosOptions={setAxiosOptions}
           setFavoritesScreen={setFavoritesScreen}
           setCurrentPage={setCurrentPage}
           scrollTop={scrollTop}
-          mobileMenu={mobileMenu}
-          setMobileMenu={setMobileMenu}
         />
         <Content
-          loading={loading}
           error={error}
+          loading={loading}
           currentCards={currentCards}
+          pagesQuantity={pagesQuantity}
+          handlePages={handlePages}
           currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          pageQuantity={pageQuantity}
-          handlePage={handlePage}
         />
         <Player />
       </Layout>

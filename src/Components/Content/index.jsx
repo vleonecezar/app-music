@@ -1,24 +1,24 @@
 import React from "react";
-import Card from "../Card";
+import { useSelector } from "react-redux";
 import {
-  Wrapper,
-  CardsList,
-  Pagination,
-  Arrow,
   Error,
   Loading,
   Empty,
+  Wrapper,
+  CardsList,
+  Arrow,
+  Pagination,
 } from "./styles";
-import arrowImg from "../../Assets/arrow-icon.png";
-import { useSelector } from "react-redux";
+import Card from "../Card";
+import arrowIconImg from "../../Assets/arrow-icon.png";
 
 const Content = ({
-  currentCards,
-  currentPage,
-  pageQuantity,
-  handlePage,
   error,
   loading,
+  currentCards,
+  pagesQuantity,
+  handlePages,
+  currentPage,
 }) => {
   const player = useSelector((state) => state.playerReducer);
 
@@ -39,17 +39,19 @@ const Content = ({
           </ul>
         </CardsList>
       }
-      {pageQuantity.length > 7 && (
+
+      {pagesQuantity.length > 7 && (
         <Arrow>
-          <img src={arrowImg} alt="arrow icon" />
+          <img src={arrowIconImg} alt="arrow icon" />
         </Arrow>
       )}
+
       <Pagination player={player}>
         <ul>
-          {pageQuantity.map((number) => (
+          {pagesQuantity.map((number) => (
             <li key={number}>
               <button
-                onClick={() => handlePage(number)}
+                onClick={() => handlePages(number)}
                 disabled={number === currentPage}
               >
                 {number}

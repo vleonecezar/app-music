@@ -1,17 +1,17 @@
 import React from "react";
+import { API_TOP_WORLD } from "../../Services/api";
 import { Wrapper, Container } from "./styles";
 import logoImg from "../../Assets/logo.png";
 import musicImg from "../../Assets/music-icon.png";
 import favoritesImg from "../../Assets/heart-icon.png";
-import { API_TOP_WORLD } from "../../Services/api";
 
 const NavBar = ({
+  mobileMenu,
+  setMobileMenu,
+  setAxiosOptions,
   setFavoritesScreen,
   setCurrentPage,
   scrollTop,
-  setAxiosOptions,
-  mobileMenu,
-  setMobileMenu,
 }) => {
   function handleNavigation(id, value) {
     if (id === "home") setAxiosOptions(API_TOP_WORLD);
