@@ -23,17 +23,19 @@ const SearchBar = ({
   }
 
   return (
-    <Wrapper onSubmit={(e) => handleSearch(e)}>
-      <button>
-        <img src={searchIconImg} alt="Icone de lupa" />
-      </button>
-      <input
-        type="text"
-        placeholder="Buscar"
-        value={inputValue}
-        ref={input}
-        onChange={() => setInputValue(input.current.value)}
-      />
+    <Wrapper>
+      <form onSubmit={(e) => handleSearch(e)}>
+        <button>
+          <img src={searchIconImg} alt="Icone de lupa" />
+        </button>
+        <input
+          type="text"
+          placeholder="Buscar"
+          value={inputValue}
+          ref={input}
+          onChange={() => setInputValue(input.current.value)}
+        />
+      </form>
     </Wrapper>
   );
 };
