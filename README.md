@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 💻 APP MUSIC
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🗒️ Sobre o projeto
 
-In the project directory, you can run:
+<div style="text-align: justify;">
+App music é um webapp que utiliza a api do deezer. <br />Na tela inicial é exibida a lista das principais músicas do momento (no deezer). 
+Cada música é exibida num card com a foto do album, nome do artista, tempo e nome da mesma, além de três botões; um que redireciona o usuário
+pro site do deezer numa nova aba com as informações da respectiva música clicada, outro que da play/stop e o último que adiciona a música na view das favoritas.
+É possível deletar as músicas da lista de favoritas na página das favoritas. Todas as músicas favoritadas estão sinalizadas com um "coração rosa".
+Existe também um campo de pesquisa, seja pesquisa de música, nome do artista ou album, será exibido as músicas relacionadas ao texto pesquisado. <br /><br />
+</div>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 💡 Instalação e execução
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tenha o git e npm instalados.<br />
+Com o terminal aberto, digite "git clone linkdorepositório" e baixe o mesmo.<br />
+Depois de baixado, navegue até a pasta do mesmo e digite "npm install" no terminal.<br />
+Ao final da instalação, basta digitar "npm start" e o app abrirá no seu localhost.<br />
+O comando "npm run build" vai gerar o mesmo app para produção, podendo assim fazer o deploy.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Tecnologias
 
-### `npm run build`
+### Frontend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- HTML
+- CSS
+- JavaScript
+- ReactJS
+- Styled Components
+- Redux
+- Redux Persist
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Screens
 
-### `npm run eject`
+### Web
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <b>HOME - TOP MÚSICAS DEEZER</b>
+  <img alt="home" src="./fts-readme/home.png" width="1000px">
+</p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <b>FAVORITAS - MÚSICAS FAVORITAS DO USUÁRIO</b>
+  <img alt="favoritas" src="./fts-readme/favoritas.png" width="1000px">
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Mobile
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+<b>VERSÃO MOBILE COM MENU FECHADO / MENU ABERTO</b>
+<div align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="home" src="./fts-readme/mobile-menu-fechado.png" width="300px">
+  <img alt="favoritas" src="./fts-readme/mobile-menu-aberto.png" width="300px">
+</div>
+</p>
