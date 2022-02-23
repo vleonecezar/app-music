@@ -1,8 +1,4 @@
-# 💻 APP MUSIC
-
----
-
-## 🗒️ Sobre o projeto
+<h1>App Music 🎵</h1>
 
 <div style="text-align: justify;">
 App music é um webapp que utiliza a api do deezer. <br />Na tela inicial é exibida a lista das principais músicas do momento (no deezer). 
@@ -12,53 +8,43 @@ pro site do deezer numa nova aba com as informações da respectiva música, out
 Existe também um campo de pesquisa, seja pesquisa de música, nome do artista ou album, será exibido as músicas relacionadas ao texto pesquisado. <br /><br />
 </div>
 
----
-
-## 💡 Instalação e execução
-
-- Tenha o git e npm instalados.
-- Com o terminal aberto, digite "git clone urlDoRepositório" e baixe o mesmo.
-- Depois de baixado, ainda no terminal, abra o repositório "cd nomeDoRepositório".
-- instale as dependências com "npm install".
-- Ao final da instalação, basta digitar "npm start" e o app abrirá no seu localhost.
-- O comando "npm run build" vai gerar o app na pasta "build", já otimizado e pronto para deploy.
-
----
-
 ## 🛠 Tecnologias
 
-### Frontend:
+- <code>HTML</code>
+- <code>CSS</code>
+- <code>JavaScript</code>
+- <code>React JS</code>
+- <code>Styled Components</code>
+- <code>Redux</code>
 
-- HTML
-- CSS
-- JavaScript
-- ReactJS
-- Styled Components
-- Redux
-- Redux Persist
+## 🚀 Instalação e execução
 
----
+#### Clonando repositório:
 
-## 🎨 Screens
+<pre>$ git clone https://github.com/vleonecezar/app-music</pre>
 
-### Web
+#### Instalando:
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <b>HOME - TOP MÚSICAS DEEZER</b>
-  <img alt="home" src="./fts-readme/home.png" width="1000px">
-</p>
+<pre>$ npm install</pre>
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <b>FAVORITAS - MÚSICAS FAVORITAS DO USUÁRIO</b>
-  <img alt="favoritas" src="./fts-readme/favoritas.png" width="1000px">
-</p>
+#### Desenvolvimento:
 
-### Mobile
+<pre>$ npm start</pre>
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-<b>VERSÃO MOBILE COM MENU FECHADO / MENU ABERTO</b>
-<div align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="home" src="./fts-readme/mobile-menu-fechado.png" width="300px">
-  <img alt="favoritas" src="./fts-readme/mobile-menu-aberto.png" width="300px">
+#### Build:
+
+<pre>$ npm run build</pre>
+
+## 💻 Screens 📱
+
+![home](https://user-images.githubusercontent.com/76831929/155420160-226bd786-58e2-4e22-ad01-188f2cc1bcff.png)
+![favoritas](https://user-images.githubusercontent.com/76831929/155420249-0f4c153e-7808-48a2-a424-fe673adcf320.png)
+
+<div align="center">
+  
+![mobile-menu-fechado](https://user-images.githubusercontent.com/76831929/155420286-10aaa268-2dae-4c98-9213-bc42ea811e0b.png)
+![mobile-menu-aberto](https://user-images.githubusercontent.com/76831929/155420307-536da040-e5b9-49eb-a12d-8df1bcaa26f3.png)
+
 </div>
-</p>
+
+
