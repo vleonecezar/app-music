@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/RepositoryNameOnGithub/static/js/main.f92eed70.chunk.js",
+    "main.js.map": "/RepositoryNameOnGithub/static/js/main.f92eed70.chunk.js.map",
+    "runtime-main.js": "/RepositoryNameOnGithub/static/js/runtime-main.1712aca4.js",
+    "runtime-main.js.map": "/RepositoryNameOnGithub/static/js/runtime-main.1712aca4.js.map",
+    "static/js/2.ca624d97.chunk.js": "/RepositoryNameOnGithub/static/js/2.ca624d97.chunk.js",
+    "static/js/2.ca624d97.chunk.js.map": "/RepositoryNameOnGithub/static/js/2.ca624d97.chunk.js.map",
+    "index.html": "/RepositoryNameOnGithub/index.html",
+    "static/js/2.ca624d97.chunk.js.LICENSE.txt": "/RepositoryNameOnGithub/static/js/2.ca624d97.chunk.js.LICENSE.txt",
+    "static/media/deezer-icon.b4cb8d64.png": "/RepositoryNameOnGithub/static/media/deezer-icon.b4cb8d64.png",
+    "static/media/playing.0e070d24.gif": "/RepositoryNameOnGithub/static/media/playing.0e070d24.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1712aca4.js",
+    "static/js/2.ca624d97.chunk.js",
+    "static/js/main.f92eed70.chunk.js"
+  ]
+}
