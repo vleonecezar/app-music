@@ -12,7 +12,7 @@
 </div>
 
 # 👨🏻‍🏫 Sobre
-App music é um webapp que utiliza a api do Deezer. <br />Na tela inicial é exibida a lista das principais músicas do momento (no deezer). 
+App music é um projeto pessoal que utiliza a api do Deezer. <br />Na tela inicial é exibida a lista das principais músicas do momento (no deezer). 
 Cada música é exibida num card com a foto do album, nome do artista, tempo e nome da mesma, além de três botões; um que redireciona o usuário
 pro site do deezer numa nova aba com as informações da respectiva música, outro que da play/stop e o último que adiciona a música na view das favoritas (as músicas ficam salvas no local storage através do Redux Persist, podendo assim atualizar a página que a informação não será perdida).
 É possível deletar as músicas da lista de favoritas na página das favoritas. Todas as músicas favoritadas estão sinalizadas com um "coração rosa".
