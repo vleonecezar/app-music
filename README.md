@@ -33,6 +33,7 @@ Existe também um campo de pesquisa, seja pesquisa de música, nome do artista o
 - <a href="https://pt-br.reactjs.org/" target="_blank">React JS</a> <br>
 - <a href="https://styled-components.com/" target="_blank">Styled Components</a> <br>
 - <a href="https://redux.js.org/" target="_blank">Redux</a> <br>
+- <a href="https://axios-http.com/ptbr/" target="_blank">Axios</a> <br>
 
 # 👨🏻‍💻 Teste a aplicação
 Você pode testar a aplicação <a href="https://vleonecezar.github.io/app-music/" target="_blank">clicando aqui</a>. <br>
